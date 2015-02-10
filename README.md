@@ -68,5 +68,6 @@ This is the base class for all servos connected to the discovery bot. Using this
     left = Servo(discovery_bot.pins.SERVO_LEFT_MOTOR)
     servo0.set_normalized_speed(100)  # Treat servo as continous and provide a speed value
     servo0.set_normalized_angle(90)   # Standard servo and provide angle 0 - 120
+    servo0.set_normalized(1200)       # Provide a pulse width to servo
     
-    
+
