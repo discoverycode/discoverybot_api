@@ -1,4 +1,4 @@
-###Discovery Bot API
+#Discovery Bot API
 
 ## The Discovery Bot
 
