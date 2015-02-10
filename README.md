@@ -50,3 +50,17 @@ The ultrsound provides functions to read the distance of objects to the front of
     usound = Ultrasound()
     usound.read()    # Get a normalized value between 0-100
     usound.distance  # Returns a rough distance in CM
+
+## Camera
+The camera class projects a means to set the angle on the camera mount as well as some basic functions for controlling the discovery bots camera.
+
+    from discovery_bot import Camera
+    camera = Camera()
+    camera.angle(90)    # Set the angle of the camera servo, between 0 - 120
+    camera.capture()    # Capture a picture with the camera and save to filesystem
+    
+## Servo
+This is the base class for all servos connected to the discovery bot. Using this class you can controll any servo connected to one of the four servo ports on the discovery bot.
+
+    from discovery_bot import Servo
+    
