@@ -8,6 +8,7 @@ The API is dived into simple classes and modules used to control different aspec
 
 ## Download Disovery Bot Image
 Get the latest image for the discovery bot for your raspberry pi
+
 *http://images.discoverykit.org/DiscoveryBot/stable/*
 
 ## Using the API in your python project
@@ -20,6 +21,11 @@ You can also import only the modules that you need (e.g. movement)
 
 ## Movement
 
+Create an instance of the movement class
+
+    import discovery_bot
+    robot = discovery_bot.Movement()
+
 Asynchronous (non-blocking) control
 
     robot.forward()     # Move forward at 100% speed
@@ -29,3 +35,10 @@ Asynchronous (non-blocking) control
     robot.backward(90)  # Move back at 90% speed
     robot.stop()        # Stop the robot
     robot.move(100, 40) # Move the left wheel at 100% and the right wheel at 40%
+    robot.move(-50, 10) # Move the left wheel backwards at 50% speed and the right wheel at 10% speed
+
+Synchronous (blocking) control
+
+    robot.forward(90, 5)    # Move forward for 5 seconds
+    robot.left(50, 1.5)     # Turn left for 1.5 seconds
+    robot.move(100, 10, 5)  # Move left motor at 100% and the right wheel at 10% for 5 seconds
