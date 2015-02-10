@@ -42,3 +42,11 @@ Synchronous (blocking) control
     robot.forward(90, 5)    # Move forward for 5 seconds
     robot.left(50, 1.5)     # Turn left for 1.5 seconds
     robot.move(100, 10, 5)  # Move left motor at 100% and the right wheel at 10% for 5 seconds
+
+## Ultrasound
+The ultrsound provides functions to read the distance of objects to the front of the robot. You can get a relative value from 0-100 or a rough value in centimeters.
+
+    from discovery_bot import Ultrasound
+    usound = Ultrasound()
+    usound.read()    # Get a normalized value between 0-100
+    usound.distance  # Returns a rough distance in CM
