@@ -62,5 +62,11 @@ The camera class projects a means to set the angle on the camera mount as well a
 ## Servo
 This is the base class for all servos connected to the discovery bot. Using this class you can controll any servo connected to one of the four servo ports on the discovery bot.
 
+    import discovery_bot
     from discovery_bot import Servo
+    servo0 = Servo(discovery_bot.pins.SERVO_0)
+    left = Servo(discovery_bot.pins.SERVO_LEFT_MOTOR)
+    servo0.set_normalized_speed(100)  # Treat servo as continous and provide a speed value
+    servo0.set_normalized_angle(90)   # Standard servo and provide angle 0 - 120
+    
     
