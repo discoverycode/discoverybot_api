@@ -70,4 +70,23 @@ This is the base class for all servos connected to the discovery bot. Using this
     servo0.set_normalized_angle(90)   # Standard servo and provide angle 0 - 120
     servo0.set_normalized(1200)       # Provide a pulse width to servo
     
+## Line Sensor
 
+    import discovery_bot
+    sensor = discovery_bot.LineSensor(discovery_bot.pins.LINE_SENSOR)
+    sensor.on_line()    # Return true if line detected
+    sensor.off_line()   # Return true if no line detected
+    sensor.last_state() # Remember the last known state of the sensor
+    
+## IO
+Base class for all GPIO based operations
+
+    import dicovery_bot
+    from discovery_bot import IO
+    gpio = IO(discovery_bot.pins.BUZZER)
+    gpio.on()
+    gpio.on_for(1) # Turn on for 1 second
+    gpio.off()
+    gpio.is_high()
+    gpio.is_low()
+    
